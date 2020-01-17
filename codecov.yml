@@ -7,13 +7,19 @@ coverage:
   range: "70...100"
 
   status:
+    project:
+      target: 90%
+      threshold: null
     website:
+      flags: website
       target: 90%
       threshold: null
     raven:
+      flags: raven
       target: 90%
       threshold: null
     core:
+      flags: core
       target: 90%
       threshold: null
 
