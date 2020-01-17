@@ -32,9 +32,12 @@
        - codecov/upload:
            file: 'coverage.lcov'
            flags: 'core'
+           conf: codecov.yml
        - codecov/upload:
            file: 'website/coverage.lcov'
            flags: 'webiste'
+           conf: codecov.yml
        - codecov/upload:
            file: 'raven/coverage.lcov'
            flags: 'raven'
+           conf: codecov.yml
