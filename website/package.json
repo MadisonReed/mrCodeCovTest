@@ -7,9 +7,6 @@
     "test": "jest",
     "test:coverage": "npm run test -- --coverage --reporter=text-lcov > coverage.lcov && npx codecov"
   },
-  "jest": {
-    "testRegex": "mr_modules/.*\\.(test.js)$"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MadisonReed/mrCodeCovTest.git"
