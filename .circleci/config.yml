@@ -31,7 +31,10 @@
             - ./node_modules
        - codecov/upload:
            file: 'coverage.lcov'
+           flags: 'core'
        - codecov/upload:
            file: 'website/coverage.lcov'
+           flags: 'webiste'
        - codecov/upload:
            file: 'raven/coverage.lcov'
+           flags: 'raven'
