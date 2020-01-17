@@ -10,7 +10,16 @@ coverage:
     project: yes
     patch: yes
     changes: no
-
+flags:
+  website:
+    paths:
+      - website/
+  raven:
+    paths:
+      - raven/
+  core:
+    paths:
+      - mr_modules/
 parsers:
   gcov:
     branch_detection:
