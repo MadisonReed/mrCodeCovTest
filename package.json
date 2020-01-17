@@ -1,0 +1,26 @@
+{
+  "name": "mrcodecovtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npx nyc --reporter=lcov npm test && npx codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadisonReed/mrCodeCovTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadisonReed/mrCodeCovTest/issues"
+  },
+  "homepage": "https://github.com/MadisonReed/mrCodeCovTest#readme",
+  "devDependencies": {
+    "codecov": "^3.6.1",
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0",
+    "nyc": "^15.0.0"
+  }
+}
