@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:coverage": "npx nyc npm test && npx nyc report --reporter=text-lcov > coverage.lcov && npx codecov"
+    "test:coverage": "npm run test -- --coverage --reporter=text-lcov > coverage.lcov && npx codecov"
   },
   "nyc": {
     "include": [
@@ -26,7 +26,6 @@
   "devDependencies": {
     "codecov": "^3.6.1",
     "coveralls": "^3.0.9",
-    "jest": "^24.9.0",
-    "nyc": "^15.0.0"
+    "jest": "^24.9.0"
   }
 }
