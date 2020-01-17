@@ -1,4 +1,5 @@
 exports.sum = sum;
+exports.subtract = subtract;
 
 function sum(a, b) {
   return a + b;

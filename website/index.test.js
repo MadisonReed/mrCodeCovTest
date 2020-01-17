@@ -1,5 +1,8 @@
-describe("fake test", () => {
-  test("it should filter by a search term (link)", () => {
-    expect(1).toEqual(1);
+const utils = require('./index');
+
+describe("test utils", () => {
+  it("it should total 3", () => {
+    let total = utils.sum(1, 2);
+    expect(total).toEqual(3);
   });
 });

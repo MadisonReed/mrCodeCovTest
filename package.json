@@ -11,10 +11,6 @@
     "include": [
       "website/**/*.js"
     ],
-    "exclude": [
-      "**/*-spec.js",
-      "**/index-story.js"
-    ],
     "all": true
   },
   "repository": {
