@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "npx jest",
     "test:coverage": "npm run test -- --coverage --reporter=text-lcov > coverage.lcov && npx codecov"
   },
   "jest": {
