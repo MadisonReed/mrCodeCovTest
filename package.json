@@ -7,6 +7,16 @@
     "test": "jest",
     "test:coverage": "npx nyc npm test && npx nyc report --reporter=text-lcov > coverage.lcov && npx codecov"
   },
+  "nyc": {
+    "include": [
+      "website/**/*.js"
+    ],
+    "exclude": [
+      "**/*-spec.js",
+      "**/index-story.js"
+    ],
+    "all": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MadisonReed/mrCodeCovTest.git"
