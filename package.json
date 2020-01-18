@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
-    "test:coverage": "npm run test -- --coverage --reporter=text-lcov > coverage.lcov && npx codecov"
+    "test:coverage": "npm run test -- --coverage && npx codecov"
   },
   "jest": {
     "testRegex": "mr_modules/.*\\.(test.js)$"
