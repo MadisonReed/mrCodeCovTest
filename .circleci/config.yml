@@ -11,11 +11,11 @@
        - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
-       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-       - run:
-          name: npm-install
-          command: 'sudo npm ci'
+       #- restore_cache:
+          #key: dependency-cache-{{ checksum "package-lock.json" }}
+       #- run:
+          #name: npm-install
+          #command: 'sudo npm ci'
        #- run:
           #name: 'core-tests'
           #command: 'npm run test:coverage'
@@ -33,10 +33,10 @@
        - run:
           name: 'run-raven-tests'
           command: 'cd raven && npm run test:coverage'
-       - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-          paths:
-            - ./node_modules
+       #- save_cache:
+          #key: dependency-cache-{{ checksum "package-lock.json" }}
+          #paths:
+            #- ./node_modules
        - codecov/upload:
            file: 'raven/coverage.lcov'
            flags: 'raven'
