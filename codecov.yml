@@ -7,7 +7,6 @@ coverage:
   range: "70...100"
 
   status:
-    project: yes
     website:
       flags: website
       target: 90%
