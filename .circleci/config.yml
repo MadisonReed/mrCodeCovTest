@@ -20,14 +20,14 @@
           name: 'core-tests'
           command: 'npm run test:coverage'
        - codecov/upload:
-           file: 'coverage/coverage.lcov'
+           file: 'coverage/lcov.info'
            flags: 'core'
            conf: 'codecov.yml'
        - run:
           name: 'run-website-tests'
           command: 'cd website && npm run test:coverage'
        - codecov/upload:
-           file: 'website/coverage/coverage.lcov'
+           file: 'website/coverage/lcov.info'
            flags: 'website'
            conf: 'codecov.yml'
        - run:
@@ -38,6 +38,6 @@
           #paths:
             #- ./node_modules
        - codecov/upload:
-           file: 'raven/coverage/coverage.lcov'
+           file: 'raven/coverage/lcov.info'
            flags: 'raven'
            conf: 'codecov.yml'
