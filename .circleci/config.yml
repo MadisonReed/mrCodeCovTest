@@ -23,12 +23,28 @@
            file: 'coverage/lcov.info'
            flags: 'core'
            conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'coverage/clover.xml'
+           flags: 'core'
+           conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'coverage/coverage-final.json'
+           flags: 'core'
+           conf: 'codecov.yml'
        - run:
           name: 'run-website-tests'
           command: 'cd website && npm run test:coverage'
        - codecov/upload:
            file: 'website/coverage/lcov.info'
            flags: 'website'
+           conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'website/coverage/clover.xml'
+           flags: 'core'
+           conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'website/coverage/coverage-final.json'
+           flags: 'core'
            conf: 'codecov.yml'
        - run:
           name: 'run-raven-tests'
@@ -40,4 +56,12 @@
        - codecov/upload:
            file: 'raven/coverage/lcov.info'
            flags: 'raven'
+           conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'raven/coverage/clover.xml'
+           flags: 'core'
+           conf: 'codecov.yml'
+       - codecov/upload:
+           file: 'raven/coverage/coverage-final.json'
+           flags: 'core'
            conf: 'codecov.yml'
