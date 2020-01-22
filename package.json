@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
-    "test:coverage": "npm run test -- --coverage && npx codecov"
+    "test:coverage": "npm run test -- --coverage && npx codecov",
+    "test:unit-tests": "npx mocha --recursive unitTests",
+    "test:unit-tests:coverage": "npx nyc --reporter=lcov --report-dir=coverage/unitTests npm run test:unit-tests && npx codecov"
   },
   "jest": {
     "testRegex": "mr_modules/.*\\.(test.js)$"
@@ -24,5 +26,8 @@
     "codecov": "^3.6.1",
     "coveralls": "^3.0.9",
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "mocha": "^7.0.0"
   }
 }
