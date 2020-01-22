@@ -37,5 +37,5 @@
           command: 'npm run test:unit-tests:coverage'
        - codecov/upload:
            file: 'coverage/unitTests/lcov.info'
-           flags: 'raven'
+           flags: 'core'
            conf: 'codecov.yml'
