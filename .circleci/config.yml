@@ -11,20 +11,11 @@
        - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
-       #- restore_cache:
-          #key: dependency-cache-{{ checksum "package-lock.json" }}
-       #- run:
-          #name: npm-install
-          #command: 'sudo npm ci'
        - run:
           name: 'core-tests'
           command: 'npm run test:coverage'
        - codecov/upload:
            file: 'coverage/lcov.info'
-           flags: 'core'
-           conf: 'codecov.yml'
-       - codecov/upload:
-           file: 'coverage/clover.xml'
            flags: 'core'
            conf: 'codecov.yml'
        - run:
@@ -34,22 +25,17 @@
            file: 'website/coverage/lcov.info'
            flags: 'website'
            conf: 'codecov.yml'
-       - codecov/upload:
-           file: 'website/coverage/clover.xml'
-           flags: 'core'
-           conf: 'codecov.yml'
        - run:
           name: 'run-raven-tests'
           command: 'cd raven && npm run test:coverage'
-       #- save_cache:
-          #key: dependency-cache-{{ checksum "package-lock.json" }}
-          #paths:
-            #- ./node_modules
        - codecov/upload:
            file: 'raven/coverage/lcov.info'
            flags: 'raven'
            conf: 'codecov.yml'
+       - run:
+          name: 'run-unit-tests'
+          command: 'npm run test:unit-tests:coverage'
        - codecov/upload:
-           file: 'raven/coverage/clover.xml'
+           file: 'coverage/unitTests/lcov.info'
            flags: 'core'
            conf: 'codecov.yml'
