@@ -1,21 +1,17 @@
-codecov:
-  require_ci_to_pass: yes
-
 coverage:
-  precision: 2
-  round: down
-  range: "70...100"
-
   status:
     website:
       flags: website
       target: 90%
+      threshold: 0%
     raven:
       flags: raven
       target: 90%
+      threshold: 0%
     core:
       flags: core
       target: 90%
+      threshold: 0%
 
 flags:
   website:
@@ -27,15 +23,3 @@ flags:
   core:
     paths:
       - mr_modules/
-parsers:
-  gcov:
-    branch_detection:
-      conditional: yes
-      loop: yes
-      method: no
-      macro: no
-
-comment:
-  layout: "reach,diff,flags,tree"
-  behavior: default
-  require_changes: no
