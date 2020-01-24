@@ -4,6 +4,7 @@ codecov:
 coverage:
   status:
     project:
+      default: false
       website:
         flags:
           - website
