@@ -4,15 +4,18 @@ codecov:
 coverage:
   status:
     website:
-      flags: website
+      flags:
+        - website
       target: 90%
       threshold: 0%
     raven:
-      flags: raven
+      flags:
+        - raven
       target: 90%
       threshold: 0%
     core:
-      flags: core
+      flags:
+        - core
       target: 90%
       threshold: 0%
 
