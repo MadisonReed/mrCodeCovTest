@@ -3,6 +3,7 @@ codecov:
 
 coverage:
   status:
+    project: off
     patch:
       website:
         flags:
