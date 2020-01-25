@@ -31,3 +31,7 @@ flags:
   core:
     paths:
       - mr_modules/
+
+# Github PR Codecov comment
+comment:
+  layout: "files, flags"
