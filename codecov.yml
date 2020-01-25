@@ -35,3 +35,4 @@ flags:
 # Github PR Codecov comment
 comment:
   layout: "files, flags"
+  behavior: "new"
